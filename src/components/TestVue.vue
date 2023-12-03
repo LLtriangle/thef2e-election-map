@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div :class="tailWindStyle">
         <input v-model="count" />
         <p :class="color">{{ count }}</p>
         <p>{{ color }}</p>
@@ -10,6 +10,7 @@
 import { ref } from "vue";
 const count = ref(0);
 const color = ref("skyblue");
+const tailWindStyle = ref("bg-gradient-to-r from-purple-500 to-pink-500");
 </script>
 
 <style>
