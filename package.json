@@ -16,6 +16,7 @@
     "@astrojs/tailwind": "^5.0.2",
     "@astrojs/vue": "^3.0.4",
     "astro": "^3.6.4",
+    "prettier-plugin-tailwindcss": "^0.5.7",
     "tailwindcss": "^3.3.5",
     "typescript": "^5.3.2",
     "vue": "^3.3.9"
