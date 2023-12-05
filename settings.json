@@ -21,8 +21,24 @@
     "[python]": {
         "editor.formatOnType": true
     },
+    "[jsonc]": {
+        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    },
     "prettier.tabWidth": 4,
     "editor.formatOnSave": true,
     "explorer.confirmDelete": false,
-    "eslint.validate": ["javascript", "javascriptreact", "astro", "typescript", "typescriptreact"],
+    "eslint.validate": [
+        "vue",
+        "html",
+        "javascript",
+        "javascriptreact",
+        "astro",
+        "typescript",
+        "typescriptreact"
+    ],
+    "eslint.enable": true,
+    "eslint.debug": true,
+    "eslint.workingDirectories": [
+        { "mode": "auto" }
+    ]
 }

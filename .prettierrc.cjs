@@ -6,4 +6,5 @@ module.exports = {
   printWidth: 120,
   bracketSpacing: true,
   plugins: ['prettier-plugin-astro', 'prettier-plugin-tailwindcss'],
+  endOfLine: 'auto',
 };
