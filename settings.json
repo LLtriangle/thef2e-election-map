@@ -15,6 +15,9 @@
     "[vue]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "[jsx]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     "[astro]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
