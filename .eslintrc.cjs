@@ -11,9 +11,9 @@ module.exports = {
     'prettier',
     'plugin:vue/vue3-recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:react/recommended',
+    /* 'plugin:react/recommended', */
   ],
-  plugins: ['eslint-plugin-prettier', 'vue', 'react'],
+  plugins: ['eslint-plugin-prettier', 'vue' /* 'react' */],
   // ...
   settings: {
     'import/ignore': ['node_modules/react-native/index\\.js$'],

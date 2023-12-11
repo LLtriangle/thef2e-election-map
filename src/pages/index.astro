@@ -1,10 +1,8 @@
 ---
-import React from 'react';
 import Layout from '../layouts/Layout.astro';
 // import Card from '../components/Card.astro';
 import TestVue from '../components/TestVue.vue';
 import TestTailwind from '../components/TestTailwind.vue';
-import TestReact from '../components/TestReact.jsx';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -42,16 +40,8 @@ import TestReact from '../components/TestReact.jsx';
       To get started, open the directory <code>src/pages</code> in your project.<br />
       <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
     </p>
-    <TestReact client:load />
     <TestVue client:load />
     <TestTailwind />
-    <img
-      class="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
-      src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
-      alt="App screenshot"
-      width="1824"
-      height="1080"
-    />
   </main>
 
   <style>
