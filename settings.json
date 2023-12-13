@@ -1,0 +1,47 @@
+{
+    "editor.wordWrap": "on",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "emmet.triggerExpansionOnTab": true,
+    "editor.maxTokenizationLineLength": 200000,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsx]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[astro]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    },
+    "prettier.tabWidth": 4,
+    "editor.formatOnSave": true,
+    "explorer.confirmDelete": false,
+    "eslint.validate": [
+        "vue",
+        "html",
+        "javascript",
+        "javascriptreact",
+        "astro",
+        "typescript",
+        "typescriptreact"
+    ],
+    "eslint.enable": true,
+    "eslint.debug": true,
+    "eslint.workingDirectories": [
+        { "mode": "auto" }
+    ]
+}
