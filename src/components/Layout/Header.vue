@@ -78,9 +78,9 @@ function activeMenu() {
           </ul>
         </nav>
         <img
-          class="navDecoImg absolute bottom-[55px] left-[-90%] w-[195%] max-w-none duration-500 ease-in sm:w-[160%] md:hidden"
+          class="navDecoImg pointer-events-none absolute bottom-[55px] left-[-90%] w-[195%] max-w-none duration-200 ease-in sm:w-[160%] md:hidden"
           style=""
-          src="../../assets/images/header/president-house-trimed.png"
+          src="../../assets/images/header/president-house.png"
           alt=""
           :class="{
             'translate-x-[-100%]': !meunIsActive,
