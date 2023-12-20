@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import { ref } from 'vue';
 const props = defineProps(['footerGoMap']);
 </script>
 
 <template>
-  <footer class="bottom-0 w-full bg-black px-8 py-3 text-white md:flex md:justify-between">
+  <footer class="relative bottom-0 z-40 w-full bg-black px-8 py-3 text-white md:flex md:justify-between">
     <a
       class="goToPoll group mb-4 flex items-center text-base md:mb-0 md:w-[80%] md:max-w-[300px] md:text-xl"
       :class="{

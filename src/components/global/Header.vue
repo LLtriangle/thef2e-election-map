@@ -13,7 +13,7 @@ function activeMenu() {
 
 <template>
   <header
-    class="fixed top-0 z-50 flex h-[55px] w-screen justify-between border-b-[3px] border-solid border-b-black bg-white px-4 py-2 after:absolute after:bottom-0 after:z-[-1] after:h-full after:w-screen after:bg-[#E72F00] after:duration-200 after:ease-in md:h-20 md:p-4 md:after:hidden"
+    class="fixed top-0 z-50 z-50 flex h-[55px] w-screen justify-between border-b-[3px] border-solid border-b-black bg-white px-4 py-2 after:absolute after:bottom-0 after:z-[-1] after:h-full after:w-screen after:bg-[#E72F00] after:duration-200 after:ease-in md:h-20 md:p-4 md:after:hidden"
     :class="{
       ' after:left-0': meunIsActive,
       ' after:left-full': !meunIsActive,
