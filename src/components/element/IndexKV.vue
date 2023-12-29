@@ -1,25 +1,25 @@
 <script setup lang="ts">
 import { ref, onMounted, reactive, toRefs } from 'vue';
 
-const { candidateKVTsai } = toRefs(reactive({ candidateKVTsai: null }));
-const speechBubbleHeight = ref(0);
+const { candidateKVImgTsai } = toRefs(reactive({ candidateKVImgTsai: null }));
+const speechBubbleTsaiHeight = ref(0);
 
-const calculateSpeechBubbleHeight = () => {
-  const candidateKVTsaiElement = candidateKVTsai.value;
+const calculateSpeechBubbleTsaiHeight = () => {
+  const candidateKVImgTsaiElement = candidateKVImgTsai.value;
 
-  if (candidateKVTsaiElement) {
-    speechBubbleHeight.value = candidateKVTsaiElement.clientHeight;
+  if (candidateKVImgTsaiElement) {
+    speechBubbleTsaiHeight.value = candidateKVImgTsaiElement.clientHeight;
   }
 };
 
 onMounted(() => {
-  calculateSpeechBubbleHeight();
-  window.addEventListener('resize', calculateSpeechBubbleHeight);
+  calculateSpeechBubbleTsaiHeight();
+  window.addEventListener('resize', calculateSpeechBubbleTsaiHeight);
 });
 </script>
 
 <template>
-  <section class="indexKv overflow-x-clip overflow-y-visible">
+  <section class="indexKv h-[30vh] overflow-x-clip overflow-y-visible md:h-[80vh]">
     <div class="candidatesContainer m-auto flex h-full max-w-[1000px] md:w-[60%]">
       <div class="candidateContainer w-full">
         <div class="candidate relative h-full w-full">
@@ -41,7 +41,7 @@ onMounted(() => {
         <div class="candidate relative h-full w-full">
           <a href="" class="candidateA tsai group">
             <img
-              ref="candidateKVTsai"
+              ref="candidateKVImgTsai"
               class="candidateKV tsai absolute bottom-[-3%] left-[-25%] z-30 w-[150%] max-w-[400px] group-hover:bottom-0 2xl:left-0"
               src="../../assets/images/index/kv-tsai.svg"
               alt=""
@@ -49,7 +49,7 @@ onMounted(() => {
             <img
               class="cta tsai absolute bottom-[350px] left-[-5%] w-full max-w-[280px] drop-shadow-xl group-hover:rotate-6 md:bottom-[350px] lg:bottom-[450px] 2xl:left-[20%]"
               src="../../assets/images/index/cta-tsai.svg"
-              :style="{ bottom: `${speechBubbleHeight}px` }"
+              :style="{ bottom: `${speechBubbleTsaiHeight}px` }"
               alt=""
             />
           </a>
