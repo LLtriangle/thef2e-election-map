@@ -24,7 +24,7 @@ onMounted(() => {
 </script>
 
 <template lang="">
-  <section class="indexVote flex w-full justify-center">
+  <section class="indexVote flex">
     <div
       class="voteContainer relative mx-auto h-[320px] w-[350px] border-x-2 border-b-2 border-black max-[320px]:w-[250px] md:mr-[15%] md:mt-5 md:border-t-2"
     >
