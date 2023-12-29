@@ -23,7 +23,7 @@ onMounted(() => {
     <div class="candidatesContainer m-auto flex h-full max-w-[1000px] md:w-[60%]">
       <div class="candidateContainer w-full">
         <div class="candidate relative h-full w-full">
-          <a href="" class="group">
+          <a href="" class="candidateA han group">
             <img
               class="candidateKV han absolute bottom-[5%] left-[-8%] w-[150%] max-w-[400px] group-hover:bottom-[8%] 2xl:left-[25%]"
               src="../../assets/images/index/kv-han.svg"
@@ -39,7 +39,7 @@ onMounted(() => {
       </div>
       <div class="candidateContainer w-full">
         <div class="candidate relative h-full w-full">
-          <a href="" class="group">
+          <a href="" class="candidateA tsai group">
             <img
               ref="candidateKVTsai"
               class="candidateKV tsai absolute bottom-[-3%] left-[-25%] z-30 w-[150%] max-w-[400px] group-hover:bottom-0 2xl:left-0"
@@ -57,7 +57,7 @@ onMounted(() => {
       </div>
       <div class="candidateContainer w-full">
         <div class="candidate relative h-full w-full">
-          <a href="" class="group">
+          <a href="" class="candidateA song group">
             <img
               class="candidateKV song absolute bottom-[5%] left-[-45%] w-[160%] max-w-[420px] group-hover:rotate-[-6deg]"
               src="../../assets/images/index/kv-song.svg"
