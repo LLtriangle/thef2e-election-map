@@ -5,10 +5,10 @@ import IndexKV from '../components/element/IndexKV.vue';
 ---
 
 <script>
-  function indexKVHeight () {
-    const header = document.querySelector('header'); 
-    const footer = document.querySelector('footer'); 
-    const indexVote = document.querySelector('.indexVote'); 
+  function indexKVHeight() {
+    const header = document.querySelector('header');
+    const footer = document.querySelector('footer');
+    const indexVote = document.querySelector('.indexVote');
 
     document.documentElement.style.setProperty('--header-height', `${header.offsetHeight}px`);
     document.documentElement.style.setProperty('--footer-height', `${footer.offsetHeight}px`);
@@ -16,32 +16,34 @@ import IndexKV from '../components/element/IndexKV.vue';
 
     if (window.innerHeight < 550) {
       document.documentElement.style.setProperty('--additional-height', '50vh');
-    } else if(window.innerHeight < 750) {
+    } else if (window.innerHeight < 750) {
       document.documentElement.style.setProperty('--additional-height', '20vh');
-    }else{
+    } else {
       document.documentElement.style.setProperty('--additional-height', '0vh');
     }
   }
 
-  document.addEventListener("DOMContentLoaded", indexKVHeight );
+  document.addEventListener('DOMContentLoaded', indexKVHeight);
 </script>
 
 <Layout isFooterGoMap="true">
   <div
-    class="relative before:pointer-events-none before:absolute before:bottom-0 before:border-l-[50vw] before:border-r-0 before:border-t-[45vh] before:border-solid before:border-y-transparent before:border-l-[#E72F00] before:border-r-transparent before:content-[''] after:pointer-events-none after:absolute after:bottom-0 after:right-0 after:border-r-[50vw] after:border-t-[45vh] after:border-solid after:border-y-transparent after:border-r-[#F5F2F2] after:content-['']  md:before:border-t-[60vh] md:after:border-t-[60vh]"
+    class="relative before:pointer-events-none before:absolute before:bottom-0 before:border-l-[50vw] before:border-r-0 before:border-t-[45vh] before:border-solid before:border-y-transparent before:border-l-primary-600 before:border-r-transparent before:content-[''] after:pointer-events-none after:absolute after:bottom-0 after:right-0 after:border-r-[50vw] after:border-t-[45vh] after:border-solid after:border-y-transparent after:border-r-grayscale-pale after:content-[''] md:before:border-t-[60vh] md:after:border-t-[60vh]"
   >
-    <IndexVote client:load class="relative z-10"/>
-    <IndexKV client:load class="relative z-40" style="height:calc(100vh - var(--header-height) - var(--footer-height) - var(--indexVote-height) + var(--additional-height)); "/>
+    <IndexVote client:load class="relative z-10" />
+    <IndexKV
+      client:load
+      class="relative z-40"
+      style="height:calc(100vh - var(--header-height) - var(--footer-height) - var(--indexVote-height) + var(--additional-height)); "
+    />
   </div>
 </Layout>
 
 <style is:global>
   :root {
-    --header-height: 0; 
-    --footer-height: 0; 
-    --indexVote-height: 0; 
+    --header-height: 0;
+    --footer-height: 0;
+    --indexVote-height: 0;
     --additional-height: 0;
   }
 </style>
-
-

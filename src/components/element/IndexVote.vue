@@ -23,12 +23,12 @@ onMounted(() => {
 <template lang="">
   <section class="indexVote flex">
     <div
-      class="voteContainer relative mx-auto h-[320px] w-[350px] border-x-2 border-b-2 border-black max-[320px]:w-[250px] md:mr-[5%] md:mt-5 md:border-t-2"
+      class="voteContainer border-grayScale-black relative mx-auto h-[320px] w-[350px] border-x-2 border-b-2 max-[320px]:w-[250px] md:mr-[5%] md:mt-5 md:border-t-2"
     >
       <div class="bureauContainer">
         <div
-          class="circleBg absolute left-[15%] top-[10%] h-[120px] w-[240px] rounded-t-[140px] bg-[#302C2C] max-[320px]:w-[160px]"
-        ></div>
+          class="circleBg bg-grayScale-stone absolute left-[15%] top-[10%] h-[120px] w-[240px] rounded-t-[140px] max-[320px]:w-[160px]"
+        />
         <div class="bureauImgContainer relative mt-[50px]">
           <img class="bureauBg" src="../../assets/images/index/bureauBg.png" />
           <img
@@ -47,21 +47,21 @@ onMounted(() => {
               mask-size: cover;
               background: rgba(0, 0, 0, 0.5);
             "
-          ></div>
+          />
         </div>
         <div class="voteStatistic mt-8 flex">
           <p
-            class="voteStatisticTsai relative ml-2 before:absolute before:left-0 before:top-[-20px] before:h-6 before:w-px before:bg-black after:absolute after:content-['0%']"
+            class="voteStatisticTsai before:bg-grayScale-black relative ml-2 before:absolute before:left-0 before:top-[-20px] before:h-6 before:w-px after:absolute after:content-['0%']"
           >
             蔡英文
           </p>
           <p
-            class="voteStatisticHan relative ml-14 before:absolute before:left-0 before:top-[-20px] before:h-6 before:w-px before:bg-black after:absolute after:content-['0%']"
+            class="voteStatisticHan before:bg-grayScale-black relative ml-14 before:absolute before:left-0 before:top-[-20px] before:h-6 before:w-px after:absolute after:content-['0%']"
           >
             韓國瑜
           </p>
           <p
-            class="voteStatisticSong relative ml-16 before:absolute before:left-0 before:top-[-20px] before:h-6 before:w-px before:bg-black after:absolute after:content-['0%']"
+            class="voteStatisticSong before:bg-grayScale-black relative ml-16 before:absolute before:left-0 before:top-[-20px] before:h-6 before:w-px after:absolute after:content-['0%']"
           >
             宋楚瑜
           </p>
@@ -69,7 +69,7 @@ onMounted(() => {
       </div>
       <a
         href=""
-        class="absolute bottom-0 block border-r-2 border-t-2 border-black p-1 duration-200 ease-in hover:bg-black hover:text-white md:px-7 md:py-2"
+        class="border-grayScale-black hover:bg-grayScale-black hover:text-grayScale-white absolute bottom-0 block border-r-2 border-t-2 p-1 duration-200 ease-in md:px-7 md:py-2"
         >看開票地圖</a
       >
     </div>
