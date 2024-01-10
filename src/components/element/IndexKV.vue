@@ -9,21 +9,18 @@ const calculateSpeechBubbleTsaiHeight = () => {
 
   if (candidateKVImgTsaiElement) {
     speechBubbleTsaiHeight.value = candidateKVImgTsaiElement.clientHeight;
-
   }
 };
 
 onMounted(() => {
   calculateSpeechBubbleTsaiHeight();
   window.addEventListener('resize', calculateSpeechBubbleTsaiHeight);
-
 });
 </script>
 
 <template>
-
-  <section class="indexKv h-[30vh] overflow-x-clip overflow-y-visible md:h-[80vh]">
-    <div class="candidatesContainer m-auto flex h-full max-w-[1000px] md:w-[60%]">
+  <section class="indexKV overflow-x-clip overflow-y-visible">
+    <div class="candidatesContainer m-auto flex h-full max-w-[1000px] md:w-[50%]">
       <div class="candidateContainer w-full">
         <div class="candidate relative h-full w-full">
           <a href="" class="candidateA han group">
@@ -52,9 +49,7 @@ onMounted(() => {
             <img
               class="cta tsai absolute bottom-[350px] left-[-5%] w-full max-w-[280px] drop-shadow-xl group-hover:rotate-6 md:bottom-[350px] lg:bottom-[450px] 2xl:left-[20%]"
               src="../../assets/images/index/cta-tsai.svg"
-
               :style="{ bottom: `${speechBubbleTsaiHeight}px` }"
-
               alt=""
             />
           </a>
@@ -74,7 +69,6 @@ onMounted(() => {
               alt=""
             />
           </a>
-          <!-- <p><span class="text-[#DD4D2A]">了解</span> 韓國瑜</p> -->
         </div>
       </div>
     </div>
