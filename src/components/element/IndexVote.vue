@@ -7,13 +7,10 @@ const bureauImgMaskHeight = ref(0);
 
 const calculateBureauImgSize = () => {
   const bureauImgElement = bureauImg.value;
-  console.log(bureauImgElement);
 
   if (bureauImgElement) {
     bureauImgMaskWidth.value = bureauImgElement.width;
     bureauImgMaskHeight.value = bureauImgElement.height;
-    console.log(bureauImgMaskWidth.value);
-    console.log(bureauImgMaskHeight.value);
   }
 };
 
@@ -26,7 +23,7 @@ onMounted(() => {
 <template lang="">
   <section class="indexVote flex">
     <div
-      class="voteContainer relative mx-auto h-[320px] w-[350px] border-x-2 border-b-2 border-black max-[320px]:w-[250px] md:mr-[15%] md:mt-5 md:border-t-2"
+      class="voteContainer relative mx-auto h-[320px] w-[350px] border-x-2 border-b-2 border-black max-[320px]:w-[250px] md:mr-[5%] md:mt-5 md:border-t-2"
     >
       <div class="bureauContainer">
         <div
