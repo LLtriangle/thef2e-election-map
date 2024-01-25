@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-let meunIsActive = ref(false);
+const meunIsActive = ref<boolean>(false);
 function activeMenu() {
   if (meunIsActive.value === true) {
     meunIsActive.value = false;
@@ -13,7 +13,7 @@ function activeMenu() {
 
 <template>
   <header
-    class="bg-grayScale-white border-b-grayScale-black fixed top-0 z-50 z-50 flex h-[55px] w-screen justify-between border-b-[3px] border-solid px-4 py-2 after:absolute after:bottom-0 after:z-[-1] after:h-full after:w-screen after:bg-primary-600 after:duration-200 after:ease-in md:h-20 md:p-4 md:after:hidden"
+    class="fixed top-0 z-50 z-50 flex h-[55px] w-screen justify-between border-b-[3px] border-solid border-b-grayScale-black bg-grayScale-white px-4 py-2 after:absolute after:bottom-0 after:z-[-1] after:h-full after:w-screen after:bg-primary-600 after:duration-200 after:ease-in md:h-20 md:p-4 md:after:hidden"
     :class="{
       ' after:left-0': meunIsActive,
       ' after:left-full': !meunIsActive,
@@ -38,7 +38,7 @@ function activeMenu() {
     <div class="navContainer flex align-middle">
       <div id="hamburger" @click="activeMenu" class="flex cursor-pointer items-center md:hidden">
         <span
-          class="bg-grayScale-black before:bg-grayScale-black after:bg-grayScale-black relative block h-1 w-8 before:absolute before:top-[-10px] before:block before:h-1 before:w-8 before:duration-200 before:ease-in after:absolute after:top-[10px] after:block after:h-1 after:w-8 after:duration-200 after:ease-in"
+          class="relative block h-1 w-8 bg-grayScale-black before:absolute before:top-[-10px] before:block before:h-1 before:w-8 before:bg-grayScale-black before:duration-200 before:ease-in after:absolute after:top-[10px] after:block after:h-1 after:w-8 after:bg-grayScale-black after:duration-200 after:ease-in"
           :class="{
             'bg-transparent before:translate-y-[10px] before:rotate-45 after:translate-y-[-10px] after:rotate-[-45deg]':
               meunIsActive,
@@ -46,7 +46,7 @@ function activeMenu() {
         ></span>
       </div>
       <nav
-        class="menu md:bg-grayScale-white after:border-l-grayScale-pale fixed right-0 top-[55px] h-screen w-screen bg-primary-600 duration-200 ease-in after:absolute after:bottom-0 after:border-b-0 after:border-l-[165vw] after:border-r-0 after:border-t-[45vh] after:border-solid after:border-y-transparent after:border-r-transparent after:duration-200 after:ease-in md:static md:h-full md:w-full md:translate-x-0 md:after:hidden"
+        class="menu fixed right-0 top-[55px] h-screen w-screen bg-primary-600 duration-200 ease-in after:absolute after:bottom-0 after:border-b-0 after:border-l-[165vw] after:border-r-0 after:border-t-[45vh] after:border-solid after:border-y-transparent after:border-l-grayScale-pale after:border-r-transparent after:duration-200 after:ease-in md:static md:h-full md:w-full md:translate-x-0 md:bg-grayScale-white md:after:hidden"
         :class="{
           'translate-x-0': meunIsActive,
           'translate-x-full': !meunIsActive,
@@ -55,21 +55,21 @@ function activeMenu() {
         <ul class="first-letter: absolute top-[20%] w-full pr-5 md:static md:top-0 md:flex md:h-full md:justify-end">
           <li class="flex justify-end md:mx-2 md:my-[auto]">
             <a
-              class="text-grayScale-white md:text-grayScale-black mb-4 cursor-pointer text-right text-2xl font-bold md:mb-0 md:text-lg md:duration-100 md:ease-in md:hover:text-primary-600"
+              class="mb-4 cursor-pointer text-right text-2xl font-bold text-grayScale-white md:mb-0 md:text-lg md:text-grayScale-black md:duration-100 md:ease-in md:hover:text-primary-600"
               href=""
               >首頁</a
             >
           </li>
           <li class="flex justify-end md:mx-2 md:my-[auto]">
             <a
-              class="text-grayScale-white md:text-grayScale-black mb-4 cursor-pointer text-right text-2xl font-bold md:mb-0 md:text-lg md:duration-100 md:ease-in md:hover:text-primary-600"
+              class="mb-4 cursor-pointer text-right text-2xl font-bold text-grayScale-white md:mb-0 md:text-lg md:text-grayScale-black md:duration-100 md:ease-in md:hover:text-primary-600"
               href=""
               >開票地圖</a
             >
           </li>
           <li class="flex justify-end md:mx-2 md:my-[auto]">
             <a
-              class="text-grayScale-white md:text-grayScale-black mb-4 cursor-pointer text-right text-2xl font-bold md:mb-0 md:text-lg md:duration-100 md:ease-in md:hover:text-primary-600"
+              class="mb-4 cursor-pointer text-right text-2xl font-bold text-grayScale-white md:mb-0 md:text-lg md:text-grayScale-black md:duration-100 md:ease-in md:hover:text-primary-600"
               href=""
               >候選人政見</a
             >
