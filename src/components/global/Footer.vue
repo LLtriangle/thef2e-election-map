@@ -1,10 +1,10 @@
 <script setup lang="ts">
-const props = defineProps(['footerGoMap']);
+const { footerGoMap } = defineProps(['footerGoMap']);
 </script>
 
 <template>
   <footer
-    class="bg-grayScale-black text-grayScale-white relative bottom-0 z-40 w-full px-8 py-3 md:flex md:justify-between"
+    class="relative bottom-0 z-40 w-full bg-grayScale-black px-8 py-3 text-grayScale-white md:flex md:justify-between"
   >
     <a
       class="goToPoll group mb-4 flex items-center text-base md:mb-0 md:w-[80%] md:max-w-[300px] md:text-xl"
