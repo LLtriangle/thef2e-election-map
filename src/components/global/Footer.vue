@@ -4,7 +4,11 @@ const { footerGoMap } = defineProps(['footerGoMap']);
 
 <template>
   <footer
-    class="relative bottom-0 z-40 w-full bg-grayScale-black px-8 py-3 text-grayScale-white md:flex md:justify-between"
+    class="relative bottom-0 z-40 w-full bg-grayScale-black px-8 py-3 text-grayScale-white md:flex"
+    :class="{
+      'md:justify-between': footerGoMap,
+      'md:justify-center': !footerGoMap,
+    }"
   >
     <a
       class="goToPoll group mb-4 flex items-center text-base md:mb-0 md:w-[80%] md:max-w-[300px] md:text-xl"
