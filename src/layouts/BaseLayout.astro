@@ -1,9 +1,10 @@
 ---
 import Header from '../components/global/Header.vue';
 import Footer from '../components/global/Footer.vue';
+import globalData from '../data/globalData.json';
 
-const title = '2020總統大選開票地圖';
-const { footerGoMap } = Astro.props;
+const { title } = globalData.layouts.GlobalLayout;
+const { footerGoPoll } = Astro.props;
 ---
 
 <html lang="en">
@@ -26,7 +27,7 @@ const { footerGoMap } = Astro.props;
     <main class="pt-[55px] md:pt-[80px]">
       <slot />
     </main>
-    <Footer client:load footerGoMap={footerGoMap} />
+    <Footer client:load footerGoPoll={footerGoPoll} />
   </body>
 </html>
 <style is:global>

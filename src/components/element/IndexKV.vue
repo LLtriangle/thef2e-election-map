@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { ref, onMounted, reactive, toRefs } from 'vue';
+import indexData from '../../data/indexData.json';
 
+const { candidateLinks } = indexData.components.IndexKV;
 const { candidateKVImgTsai } = toRefs(reactive({ candidateKVImgTsai: null }));
 const speechBubbleTsaiHeight = ref(0);
 
@@ -23,7 +25,7 @@ onMounted(() => {
     <div class="candidatesContainer m-auto flex h-full max-w-[1000px] md:w-[50%]">
       <div class="candidateContainer w-full">
         <div class="candidate relative h-full w-full">
-          <a href="" class="candidateA han group">
+          <a :href="candidateLinks[0].href" class="candidateA han group">
             <img
               class="candidateKV han absolute bottom-[5%] left-[-8%] w-[150%] max-w-[400px] group-hover:bottom-[8%] 2xl:left-[25%]"
               src="../../assets/images/index/kv-han.svg"
@@ -39,7 +41,7 @@ onMounted(() => {
       </div>
       <div class="candidateContainer w-full">
         <div class="candidate relative h-full w-full">
-          <a href="" class="candidateA tsai group">
+          <a :href="candidateLinks[1].href" class="candidateA tsai group">
             <img
               ref="candidateKVImgTsai"
               class="candidateKV tsai absolute bottom-[-3%] left-[-25%] z-30 w-[150%] max-w-[400px] group-hover:bottom-0 2xl:left-0"
@@ -57,7 +59,7 @@ onMounted(() => {
       </div>
       <div class="candidateContainer w-full">
         <div class="candidate relative h-full w-full">
-          <a href="" class="candidateA song group">
+          <a :href="candidateLinks[2].href" class="candidateA song group">
             <img
               class="candidateKV song absolute bottom-[5%] left-[-45%] w-[160%] max-w-[420px] group-hover:rotate-[-6deg]"
               src="../../assets/images/index/kv-song.svg"
