@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import globalData from '../../data/globalData.json';
 
+const navLinks = ref(globalData.components.header.navLinks);
 const meunIsActive = ref<boolean>(false);
+
 function activeMenu() {
   if (meunIsActive.value === true) {
     meunIsActive.value = false;
@@ -20,7 +23,7 @@ function activeMenu() {
     }"
   >
     <h1 class="logo flex w-[70%] items-center md:w-[60%]">
-      <a href=""
+      <a :href="navLinks[0].href"
         ><img
           src="../../assets/images/header/logo-origin.svg"
           class="md:block"
@@ -43,7 +46,7 @@ function activeMenu() {
             'bg-transparent before:translate-y-[10px] before:rotate-45 after:translate-y-[-10px] after:rotate-[-45deg]':
               meunIsActive,
           }"
-        ></span>
+        />
       </div>
       <nav
         class="menu fixed right-0 top-[55px] h-screen w-screen bg-primary-600 duration-200 ease-in after:absolute after:bottom-0 after:border-b-0 after:border-l-[165vw] after:border-r-0 after:border-t-[45vh] after:border-solid after:border-y-transparent after:border-l-grayScale-pale after:border-r-transparent after:duration-200 after:ease-in md:static md:h-full md:w-full md:translate-x-0 md:bg-grayScale-white md:after:hidden"
@@ -53,25 +56,11 @@ function activeMenu() {
         }"
       >
         <ul class="first-letter: absolute top-[20%] w-full pr-5 md:static md:top-0 md:flex md:h-full md:justify-end">
-          <li class="flex justify-end md:mx-2 md:my-[auto]">
+          <li v-for="(link, index) in navLinks" :key="index" class="flex justify-end md:mx-2 md:my-[auto]">
             <a
               class="mb-4 cursor-pointer text-right text-2xl font-bold text-grayScale-white md:mb-0 md:text-lg md:text-grayScale-black md:duration-100 md:ease-in md:hover:text-primary-600"
-              href=""
-              >首頁</a
-            >
-          </li>
-          <li class="flex justify-end md:mx-2 md:my-[auto]">
-            <a
-              class="mb-4 cursor-pointer text-right text-2xl font-bold text-grayScale-white md:mb-0 md:text-lg md:text-grayScale-black md:duration-100 md:ease-in md:hover:text-primary-600"
-              href=""
-              >開票地圖</a
-            >
-          </li>
-          <li class="flex justify-end md:mx-2 md:my-[auto]">
-            <a
-              class="mb-4 cursor-pointer text-right text-2xl font-bold text-grayScale-white md:mb-0 md:text-lg md:text-grayScale-black md:duration-100 md:ease-in md:hover:text-primary-600"
-              href=""
-              >候選人政見</a
+              :href="link.href"
+              >{{ link.text }}</a
             >
           </li>
         </ul>
