@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout footerGoPoll={false}>
+  <div class="mapContainer md:flex md:flex-row-reverse md:p-16">
+    <div class="detailedMapContainer flex h-[90vh] w-screen flex-col bg-primary-500 md:flex-col-reverse">
+      <div class="map h-[90%] w-full bg-grayScale-pale"></div>
+      <div class="filters h-[10%] w-full bg-secondary-blue filter"></div>
+    </div>
+    <div class="statisticContaier m-auto h-[90vh] w-[90vw] bg-secondary-green">
+      <div class="candidateStatistic h-2/5 bg-pink-200"></div>
+      <div class="regionStatistic h-3/5 bg-secondary-orange"></div>
+    </div>
+  </div>
+</BaseLayout>
