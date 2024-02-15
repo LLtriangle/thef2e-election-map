@@ -1,5 +1,11 @@
 <script setup lang="ts">
 import { ref, onMounted, reactive, toRefs } from 'vue';
+import indexData from '../../data/indexData.json';
+
+const { candidate } = indexData.components.IndexVote;
+const { goMapLinks } = indexData.components.IndexVote;
+console.log(candidate);
+console.log(goMapLinks);
 
 const { bureauImg } = toRefs(reactive({ bureauImg: null }));
 const bureauImgMaskWidth = ref(0);
@@ -23,11 +29,11 @@ onMounted(() => {
 <template lang="">
   <section class="indexVote flex">
     <div
-      class="voteContainer border-grayScale-black relative mx-auto h-[320px] w-[350px] border-x-2 border-b-2 max-[320px]:w-[250px] md:mr-[5%] md:mt-5 md:border-t-2"
+      class="voteContainer relative mx-auto h-[320px] w-[350px] border-x-2 border-b-2 border-grayScale-black max-[320px]:w-[250px] md:mr-[5%] md:mt-5 md:border-t-2"
     >
       <div class="bureauContainer">
         <div
-          class="circleBg bg-grayScale-stone absolute left-[15%] top-[10%] h-[120px] w-[240px] rounded-t-[140px] max-[320px]:w-[160px]"
+          class="circleBg absolute left-[15%] top-[10%] h-[120px] w-[240px] rounded-t-[140px] bg-grayScale-stone max-[320px]:w-[160px]"
         />
         <div class="bureauImgContainer relative mt-[50px]">
           <img class="bureauBg" src="../../assets/images/index/bureauBg.png" />
@@ -51,26 +57,26 @@ onMounted(() => {
         </div>
         <div class="voteStatistic mt-8 flex">
           <p
-            class="voteStatisticTsai before:bg-grayScale-black relative ml-2 before:absolute before:left-0 before:top-[-20px] before:h-6 before:w-px after:absolute after:content-['0%']"
+            class="voteStatisticTsai relative ml-2 before:absolute before:left-0 before:top-[-20px] before:h-6 before:w-px before:bg-grayScale-black after:absolute after:content-['0%']"
           >
-            蔡英文
+            {{ candidate[0] }}
           </p>
           <p
-            class="voteStatisticHan before:bg-grayScale-black relative ml-14 before:absolute before:left-0 before:top-[-20px] before:h-6 before:w-px after:absolute after:content-['0%']"
+            class="voteStatisticHan relative ml-14 before:absolute before:left-0 before:top-[-20px] before:h-6 before:w-px before:bg-grayScale-black after:absolute after:content-['0%']"
           >
-            韓國瑜
+            {{ candidate[1] }}
           </p>
           <p
-            class="voteStatisticSong before:bg-grayScale-black relative ml-16 before:absolute before:left-0 before:top-[-20px] before:h-6 before:w-px after:absolute after:content-['0%']"
+            class="voteStatisticSong relative ml-16 before:absolute before:left-0 before:top-[-20px] before:h-6 before:w-px before:bg-grayScale-black after:absolute after:content-['0%']"
           >
-            宋楚瑜
+            {{ candidate[2] }}
           </p>
         </div>
       </div>
       <a
-        href=""
-        class="border-grayScale-black hover:bg-grayScale-black hover:text-grayScale-white absolute bottom-0 block border-r-2 border-t-2 p-1 duration-200 ease-in md:px-7 md:py-2"
-        >看開票地圖</a
+        :href="goMapLinks[0].href"
+        class="absolute bottom-0 block border-r-2 border-t-2 border-grayScale-black p-1 duration-200 ease-in hover:bg-grayScale-black hover:text-grayScale-white md:px-7 md:py-2"
+        >{{ goMapLinks[0].text }}</a
       >
     </div>
   </section>

@@ -1,0 +1,26 @@
+{
+  "layouts": {
+    "GlobalLayout": {
+      "title": "2020總統大選開票地圖"
+    }
+  },
+  "pages": {
+    "index": {}
+  },
+  "components": {
+    "header": {
+      "navLinks": [
+        { "text": "首頁", "href": "/" },
+        { "text": "開票地圖", "href": "/map" },
+        { "text": "候選人政見", "href": "/candidates" }
+      ]
+    },
+    "footer": {
+      "footerLinks": [
+        { "text": "看選前民調", "href": "/" },
+        { "text": "樹懶設計 shulian@gmail.com", "href": "/map" },
+        { "text": "© 2023 樹懶設計 shulian 版權所有", "href": "" }
+      ]
+    }
+  }
+}

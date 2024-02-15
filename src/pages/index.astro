@@ -1,5 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/BaseLayout.astro';
 import IndexVote from '../components/element/IndexVote.vue';
 import IndexKV from '../components/element/IndexKV.vue';
 ---
@@ -28,7 +28,7 @@ import IndexKV from '../components/element/IndexKV.vue';
   document.addEventListener('DOMContentLoaded', indexKVHeight);
 </script>
 
-<Layout footerGoMap={true}>
+<Layout footerGoPoll={true}>
   <div
     class="relative before:pointer-events-none before:absolute before:bottom-0 before:border-l-[50vw] before:border-r-0 before:border-t-[45vh] before:border-solid before:border-y-transparent before:border-l-primary-600 before:border-r-transparent before:content-[''] after:pointer-events-none after:absolute after:bottom-0 after:right-0 after:border-r-[50vw] after:border-t-[45vh] after:border-solid after:border-y-transparent after:border-r-grayScale-pale after:content-[''] md:before:border-t-[60vh] md:after:border-t-[60vh]"
   >
