@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import StackedBarChart from '../components/barChart/StackedBarChart.vue';
 ---
 
 <BaseLayout footerGoPoll={false}>
@@ -8,9 +9,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="map h-[90%] w-full bg-grayScale-pale"></div>
       <div class="filters h-[10%] w-full bg-secondary-blue filter"></div>
     </div>
+
     <div class="statisticContaier m-auto h-[90vh] w-[90vw] bg-secondary-green">
       <div class="candidateStatistic h-2/5 bg-pink-200"></div>
-      <div class="regionStatistic h-3/5 bg-secondary-orange"></div>
+      <div class="regionStatistic h-3/5 bg-purple-100"><StackedBarChart /></div>
     </div>
   </div>
 </BaseLayout>
