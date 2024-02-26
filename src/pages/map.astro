@@ -4,15 +4,65 @@ import StackedBarChart from '../components/barChart/StackedBarChart.vue';
 ---
 
 <BaseLayout footerGoPoll={false}>
-  <div class="mapContainer md:flex md:flex-row-reverse md:p-16">
+  <div class="mapContainer md:flex md:flex-row-reverse md:p-12">
     <div class="detailedMapContainer flex h-[90vh] w-screen flex-col bg-primary-500 md:flex-col-reverse">
       <div class="map h-[90%] w-full bg-grayScale-pale"></div>
       <div class="filters h-[10%] w-full bg-secondary-blue filter"></div>
     </div>
-
-    <div class="statisticContaier m-auto h-[90vh] w-[90vw] bg-secondary-green">
-      <div class="candidateStatistic h-2/5 bg-pink-200"></div>
-      <div class="regionStatistic h-3/5 bg-purple-100"><StackedBarChart /></div>
+    <div class="statisticContaier m-auto h-[90vh] w-[90vw] bg-secondary-green md:mr-5">
+      <div class="candidateStatistic h-2/5 border-2 border-grayScale-black bg-pink-200">
+        <div
+          class="reagionTxtContainer flex h-1/5 items-center justify-center border-b-[1px] border-grayScale-black bg-green-100"
+        >
+          <p class="regionTxt text-xl font-semibold">全台</p>
+        </div>
+        <div class="detailedCandidatestatisticContainer p-14">
+          <div class="detailedCandidateStatistic">
+            <img class="avatar" src="" alt="" />
+            <p class="rate"></p>
+            <p class="percentange"></p>
+          </div>
+        </div>
+      </div>
+      <div class="regionStatistic h-3/5 border-2 border-t-0 border-grayScale-black bg-purple-100 p-6">
+        <div class="topCandidate border-[1px] border-grayScale-black">
+          <p class="px-6 py-3 text-base">最支持</p>
+          <div class="mostSupported"></div>
+        </div>
+        <div class="statisticTopic flex">
+          <p class="region text-grayScale-salt p-2 pl-0 text-base">縣市</p>
+          <p class="portion text-grayScale-salt p-2 text-base">得票占比</p>
+        </div>
+        <div class="barChartContainer max-h-[65%] overflow-auto">
+          <div class="regionChart"><StackedBarChart /></div>
+          <div class="regionChart"><StackedBarChart /></div>
+          <div class="regionChart"><StackedBarChart /></div>
+          <div class="regionChart"><StackedBarChart /></div>
+          <div class="regionChart"><StackedBarChart /></div>
+          <div class="regionChart"><StackedBarChart /></div>
+          <div class="regionChart"><StackedBarChart /></div>
+          <div class="regionChart"><StackedBarChart /></div>
+          <div class="regionChart"><StackedBarChart /></div>
+          <div class="regionChart"><StackedBarChart /></div>
+          <div class="regionChart"><StackedBarChart /></div>
+          <div class="regionChart"><StackedBarChart /></div>
+          <div class="regionChart"><StackedBarChart /></div>
+          <div class="regionChart"><StackedBarChart /></div>
+          <div class="regionChart"><StackedBarChart /></div>
+          <div class="regionChart"><StackedBarChart /></div>
+          <div class="regionChart"><StackedBarChart /></div>
+          <div class="regionChart"><StackedBarChart /></div>
+          <div class="regionChart"><StackedBarChart /></div>
+          <div class="regionChart"><StackedBarChart /></div>
+          <div class="regionChart"><StackedBarChart /></div>
+          <div class="regionChart"><StackedBarChart /></div>
+          <div class="regionChart"><StackedBarChart /></div>
+          <div class="regionChart"><StackedBarChart /></div>
+          <div class="regionChart"><StackedBarChart /></div>
+          <div class="regionChart"><StackedBarChart /></div>
+          <div class="regionChart"><StackedBarChart /></div>
+        </div>
+      </div>
     </div>
   </div>
 </BaseLayout>
