@@ -26,6 +26,7 @@ export default {
         grayScale: {
           black: '#000000',
           stone: '#302C2C',
+          salt: '#8888',
           gray: '#444444',
           pale: '#F5F2F2',
           white: '#FFFFFF',
