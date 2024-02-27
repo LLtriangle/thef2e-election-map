@@ -1,6 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import StackedBarChart from '../components/barChart/StackedBarChart.vue';
+import RegionChart from '../components/element/RegionChart.vue';
+import mapPageData from '../data/mapPageData.json';
+
+const mapPageSubtitle = mapPageData.pages.subtitles;
 ---
 
 <BaseLayout footerGoPoll={false}>
@@ -14,7 +17,7 @@ import StackedBarChart from '../components/barChart/StackedBarChart.vue';
         <div
           class="reagionTxtContainer flex h-1/5 items-center justify-center border-b-[1px] border-grayScale-black bg-green-100"
         >
-          <p class="regionTxt text-xl font-semibold">全台</p>
+          <p class="regionTxt text-xl font-semibold">{mapPageSubtitle[0].text}</p>
         </div>
         <div class="detailedCandidatestatisticContainer p-14">
           <div class="detailedCandidateStatistic">
@@ -26,41 +29,25 @@ import StackedBarChart from '../components/barChart/StackedBarChart.vue';
       </div>
       <div class="regionStatistic h-3/5 border-2 border-t-0 border-grayScale-black bg-purple-100 p-6">
         <div class="topCandidate border-[1px] border-grayScale-black">
-          <p class="px-6 py-3 text-base">最支持</p>
+          <p class="topCandidateTxt px-6 py-3 text-base">{mapPageSubtitle[1].text}</p>
           <div class="mostSupported"></div>
         </div>
         <div class="statisticTopic flex">
-          <p class="region text-grayScale-salt p-2 pl-0 text-base">縣市</p>
-          <p class="portion text-grayScale-salt p-2 text-base">得票占比</p>
+          <p class="region py-3 pr-16 text-base text-grayScale-salt">{mapPageSubtitle[2].text}</p>
+          <p class="portion py-3 text-base text-grayScale-salt">{mapPageSubtitle[3].text}</p>
         </div>
         <div class="barChartContainer max-h-[65%] overflow-auto">
-          <div class="regionChart"><StackedBarChart /></div>
-          <div class="regionChart"><StackedBarChart /></div>
-          <div class="regionChart"><StackedBarChart /></div>
-          <div class="regionChart"><StackedBarChart /></div>
-          <div class="regionChart"><StackedBarChart /></div>
-          <div class="regionChart"><StackedBarChart /></div>
-          <div class="regionChart"><StackedBarChart /></div>
-          <div class="regionChart"><StackedBarChart /></div>
-          <div class="regionChart"><StackedBarChart /></div>
-          <div class="regionChart"><StackedBarChart /></div>
-          <div class="regionChart"><StackedBarChart /></div>
-          <div class="regionChart"><StackedBarChart /></div>
-          <div class="regionChart"><StackedBarChart /></div>
-          <div class="regionChart"><StackedBarChart /></div>
-          <div class="regionChart"><StackedBarChart /></div>
-          <div class="regionChart"><StackedBarChart /></div>
-          <div class="regionChart"><StackedBarChart /></div>
-          <div class="regionChart"><StackedBarChart /></div>
-          <div class="regionChart"><StackedBarChart /></div>
-          <div class="regionChart"><StackedBarChart /></div>
-          <div class="regionChart"><StackedBarChart /></div>
-          <div class="regionChart"><StackedBarChart /></div>
-          <div class="regionChart"><StackedBarChart /></div>
-          <div class="regionChart"><StackedBarChart /></div>
-          <div class="regionChart"><StackedBarChart /></div>
-          <div class="regionChart"><StackedBarChart /></div>
-          <div class="regionChart"><StackedBarChart /></div>
+          <RegionChart />
+          <RegionChart />
+          <RegionChart />
+          <RegionChart />
+          <RegionChart />
+          <RegionChart />
+          <RegionChart />
+          <RegionChart />
+          <RegionChart />
+          <RegionChart />
+          <RegionChart />
         </div>
       </div>
     </div>
