@@ -1,0 +1,15 @@
+{
+  "components": {
+    "IndexKV": {
+      "candidateLinks": [
+        { "candidate": "韓國瑜", "href": "/home" },
+        { "candidate": "蔡英文", "href": "/map" },
+        { "candidate": "宋楚瑜", "href": "/candidates" }
+      ]
+    },
+    "IndexVote": {
+      "candidate": ["蔡英文", "韓國瑜", "宋楚瑜"],
+      "goMapLinks": [{ "text": "看開票地圖", "href": "/map" }]
+    }
+  }
+}

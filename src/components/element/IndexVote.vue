@@ -1,11 +1,9 @@
 <script setup lang="ts">
 import { ref, onMounted, reactive, toRefs } from 'vue';
-import indexData from '../../data/indexData.json';
+import indexData from '../../data/indexPageData.json';
 
 const { candidate } = indexData.components.IndexVote;
 const { goMapLinks } = indexData.components.IndexVote;
-console.log(candidate);
-console.log(goMapLinks);
 
 const { bureauImg } = toRefs(reactive({ bureauImg: null }));
 const bureauImgMaskWidth = ref(0);
