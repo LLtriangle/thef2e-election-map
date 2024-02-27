@@ -3,7 +3,6 @@ import globalData from '../../data/globalData.json';
 /* const navLinks = ref(globalData.components.header.navLinks); */
 const { footerLinks } = globalData.components.footer;
 const { footerGoPoll } = defineProps(['footerGoPoll']);
-console.log(footerLinks);
 </script>
 
 <template>
